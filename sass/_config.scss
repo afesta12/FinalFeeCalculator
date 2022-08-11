@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+
+}
+
+// Colors / variables
+$background-color: hsl(185, 41%, 84%);
+$dark: hsl(183, 100%, 15%);
+$main-text: hsl(172, 67%, 45%);
+$white: hsl(0, 0%, 100%);
+$secondary-text: hsl(184, 14%, 56%);
+$input: hsl(189, 41%, 97%);
+
+// Globals
+label {
+
+    color: $secondary-text;
+    margin-bottom: .25rem;
+    font-size: .75rem;
+
+}
+
+header {
+
+    margin-top: 1rem;
+    color: $dark;
+
+}
+
+span {
+
+    color: $main-text;
+
+}
+
+h2 {
+
+    color: $main-text;
+    font-weight: 700;
+    font-size: 2.5rem;
+
+}
+
+p {
+
+    color: $white;
+    font-weight: 700;
+
+}
+
+h6 {
+
+    color: $secondary-text;
+
+}
+
+input {
+
+    background-color: $input;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: .75rem;
+    text-align: right;
+    color: $main-text;
+    outline: none;
+        
+}
+
+input:hover, input:active {
+
+    border: 1px solid $main-text;
+    outline: $main-text;
+
+}
+
+button {
+
+    border: none;
+    border-radius: 10px;
+    color: $dark;
+    background-color: $main-text;
+    width: 100%;
+    padding: .75rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+.radio {
+
+    cursor: pointer;
+    margin-left: .25rem;
+
+    &__label {
+
+        margin: 0;
+
+    }
+
+}
+
+// Disable input scroll bars
+input[type="number"]::-webkit-outer-spin-button, 
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}

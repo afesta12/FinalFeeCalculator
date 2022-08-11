@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+}
+
+label {
+  color: hsl(184deg, 14%, 56%);
+  margin-bottom: 0.25rem;
+  font-size: 0.75rem;
+}
+
+header {
+  margin-top: 1rem;
+  color: hsl(183deg, 100%, 15%);
+}
+
+span {
+  color: hsl(172deg, 67%, 45%);
+}
+
+h2 {
+  color: hsl(172deg, 67%, 45%);
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+p {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 700;
+}
+
+h6 {
+  color: hsl(184deg, 14%, 56%);
+}
+
+input {
+  background-color: hsl(189deg, 41%, 97%);
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 0.75rem;
+  text-align: right;
+  color: hsl(172deg, 67%, 45%);
+  outline: none;
+}
+
+input:hover, input:active {
+  border: 1px solid hsl(172deg, 67%, 45%);
+  outline: hsl(172deg, 67%, 45%);
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  color: hsl(183deg, 100%, 15%);
+  background-color: hsl(172deg, 67%, 45%);
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.radio {
+  cursor: pointer;
+  margin-left: 0.25rem;
+}
+.radio__label {
+  margin: 0;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: hsl(185deg, 41%, 84%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  margin-top: 1rem;
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 10px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  max-width: 400px;
+}
+
+.section__input {
+  display: flex;
+  flex-direction: column;
+}
+.section__input__container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.section__radio {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.section__radio__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section__output {
+  background-color: hsl(183deg, 100%, 15%);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+.section__output__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}/*# sourceMappingURL=index.css.map */

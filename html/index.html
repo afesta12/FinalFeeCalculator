@@ -5,11 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Final Fee Calculator</title>
+    <link rel="stylesheet" href="../sass/index.css">
+    
 </head>
 <body>
    
     <div class="wrapper">
  
+        <header>
+
+            <h1>Final<span>Fee</span></h1>
+
+        </header>
+
         <main>
  
             <section class="section">
@@ -35,20 +43,20 @@
  
                     <div class="section__radio__container">
  
-                        <label for="">eBay</label>
-                        <input type="radio" id="ebay" name="sellingPlatform" class="active">
+                        <label for="" class="radio__label">eBay</label>
+                        <input type="radio" id="ebay" name="sellingPlatform" class="radio active">
  
                     </div>
                     <div class="section__radio__container">
  
-                        <label for="">mercari</label>
-                        <input type="radio" id="mercari" name="sellingPlatform">
+                        <label for="" class="radio__label">mercari</label>
+                        <input type="radio" id="mercari" name="sellingPlatform" class="radio">
  
                     </div>
                     <div class="section__radio__container">
  
-                        <label for="">PayPal</label>
-                        <input type="radio" id="paypal" name="sellingPlatform">
+                        <label for="" class="radio__label">PayPal</label>
+                        <input type="radio" id="paypal" name="sellingPlatform" class="radio">
  
                     </div>
  
@@ -79,13 +87,21 @@
  
                     <div class="section__output__container">
  
-                        <p>Fee Amount</p>
+                        <div class="stacked">
+                            <p>Fee Amount</p>
+                            <h6>/ item</h6>
+                        </div>
+
                         <h2>$0.00</h2>
  
                     </div>
                     <div class="section__output__container">
  
-                        <p>Total Profit</p>
+                        <div class="stacked">
+                            <p>Total Profit</p>
+                            <h6>/ item</h6>
+                        </div>
+
                         <h2>$0.00</h2>
  
                     </div>
