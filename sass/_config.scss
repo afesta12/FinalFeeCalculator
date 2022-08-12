@@ -69,6 +69,7 @@ input {
     text-align: right;
     color: $main-text;
     outline: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
         
 }
 
@@ -79,7 +80,13 @@ input:hover, input:active {
 
 }
 
-button {
+.mercari {
+
+    font-size: 1rem;
+
+}
+
+.reset {
 
     border: none;
     border-radius: 10px;
@@ -115,3 +122,4 @@ input[type="number"]::-webkit-inner-spin-button {
 input[type="number"] {
     -moz-appearance: textfield;
 }
+

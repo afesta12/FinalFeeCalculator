@@ -44,6 +44,7 @@ input {
   text-align: right;
   color: hsl(172deg, 67%, 45%);
   outline: none;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
 input:hover, input:active {
@@ -51,7 +52,11 @@ input:hover, input:active {
   outline: hsl(172deg, 67%, 45%);
 }
 
-button {
+.mercari {
+  font-size: 1rem;
+}
+
+.reset {
   border: none;
   border-radius: 10px;
   color: hsl(183deg, 100%, 15%);
@@ -83,7 +88,7 @@ input[type=number] {
 
 .wrapper {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background-color: hsl(185deg, 41%, 84%);
   display: flex;
   flex-direction: column;
@@ -92,7 +97,6 @@ input[type=number] {
 
 main {
   width: 100%;
-  margin-top: 1rem;
   background-color: hsl(0deg, 0%, 100%);
   border-radius: 10px;
   padding: 2rem;
@@ -100,6 +104,8 @@ main {
   flex-direction: column;
   justify-content: space-evenly;
   max-width: 400px;
+  margin-top: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 .section__input {
@@ -113,7 +119,7 @@ main {
 }
 .section__radio {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin-bottom: 1rem;
 }
 .section__radio__container {
@@ -126,10 +132,27 @@ main {
   border-radius: 10px;
   padding: 1rem;
   margin-top: 1rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 .section__output__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0.5rem;
+}
+
+.btn {
+  padding: 0.75rem 0.5rem;
+  color: hsl(184deg, 14%, 56%);
+  background-color: transparent;
+  border: none;
+  font-size: 1.4rem;
+}
+
+.btn:hover {
+  color: hsl(172deg, 67%, 45%);
+}
+
+.active {
+  color: hsl(172deg, 67%, 45%);
 }/*# sourceMappingURL=index.css.map */

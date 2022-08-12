@@ -3,7 +3,7 @@
 .wrapper {
 
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     background-color: $background-color;
     display: flex;
     flex-direction: column;
@@ -14,7 +14,6 @@
 main {
 
     width: 100%;
-    margin-top: 1rem;
     background-color: $white;
     border-radius: 10px;
     padding: 2rem;
@@ -22,7 +21,13 @@ main {
     flex-direction: column;
     justify-content: space-evenly;
     max-width: 400px;
-
+    margin-top: .5rem;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, 
+                rgba(0, 0, 0, 0.09) 0px 4px 2px,
+                rgba(0, 0, 0, 0.09) 0px 8px 4px,
+                rgba(0, 0, 0, 0.09) 0px 16px 8px,
+                rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    
 }
 
 .section {
@@ -45,7 +50,7 @@ main {
     &__radio {
 
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         margin-bottom: 1rem;
 
         
@@ -65,6 +70,7 @@ main {
         border-radius: 10px;
         padding: 1rem;
         margin-top: 1rem;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 
         &__container {
 
@@ -77,4 +83,26 @@ main {
 
     }
 
+}
+
+.btn {
+
+    padding: .75rem .5rem;
+    color: $secondary-text;
+    background-color: transparent;
+    border: none;
+    font-size: 1.4rem;
+
+}
+
+.btn:hover {
+
+    color: $main-text;
+
+}
+
+.active {
+
+    color: $main-text;
+    
 }

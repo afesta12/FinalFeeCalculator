@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Final Fee Calculator</title>
     <link rel="stylesheet" href="../sass/index.css">
+    <script src="https://kit.fontawesome.com/63bd6b6839.js" crossorigin="anonymous"></script>
     
 </head>
 <body>
@@ -43,20 +44,17 @@
  
                     <div class="section__radio__container">
  
-                        <label for="" class="radio__label">eBay</label>
-                        <input type="radio" id="ebay" name="sellingPlatform" class="radio active">
+                        <button id="ebay" class="btn active"><i class="fa-brands fa-ebay"></i></button>
  
                     </div>
-                    <div class="section__radio__container">
+                    <div id="mercari" class="section__radio__container">
  
-                        <label for="" class="radio__label">mercari</label>
-                        <input type="radio" id="mercari" name="sellingPlatform" class="radio">
+                        <button class="btn"><h5 class="mercari">Mercari</h5></button>
  
                     </div>
-                    <div class="section__radio__container">
+                    <div id="paypal" class="section__radio__container">
  
-                        <label for="" class="radio__label">PayPal</label>
-                        <input type="radio" id="paypal" name="sellingPlatform" class="radio">
+                        <button class="btn"><i class="fa-brands fa-paypal"></i></button>
  
                     </div>
  
@@ -106,7 +104,7 @@
  
                     </div>
  
-                    <button id="reset">Reset</button>
+                    <button class="reset" id="reset">Reset</button>
                 </div>
  
             </section>
