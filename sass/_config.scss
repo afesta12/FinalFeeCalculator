@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 
+// Colors / variables
+$background-color: hsl(185, 41%, 84%);
+$dark: hsl(183, 100%, 15%);
+$main-text: hsl(172, 67%, 45%);
+$white: hsl(0, 0%, 100%);
+$secondary-text: hsl(184, 14%, 56%);
+$input: hsl(189, 41%, 97%);
+
 * {
 
     margin: 0;
@@ -9,13 +17,11 @@
 
 }
 
-// Colors / variables
-$background-color: hsl(185, 41%, 84%);
-$dark: hsl(183, 100%, 15%);
-$main-text: hsl(172, 67%, 45%);
-$white: hsl(0, 0%, 100%);
-$secondary-text: hsl(184, 14%, 56%);
-$input: hsl(189, 41%, 97%);
+body {
+
+    background-color: $background-color;
+
+}
 
 // Globals
 label {
@@ -113,6 +119,14 @@ input:hover, input:active {
 
 }
 
+.dollar {
+
+    color: $secondary-text;
+    position: absolute;
+    top: 35px;
+    left: 10px;
+}
+
 // Disable input scroll bars
 input[type="number"]::-webkit-outer-spin-button, 
 input[type="number"]::-webkit-inner-spin-button {
@@ -123,3 +137,13 @@ input[type="number"] {
     -moz-appearance: textfield;
 }
 
+// Media Queries
+@mixin screen-md {
+    
+    @media screen and (min-width: 764px) {
+
+        @content;
+
+    }
+
+}

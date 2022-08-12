@@ -6,6 +6,10 @@
   font-family: "Space Mono", monospace;
 }
 
+body {
+  background-color: hsl(185deg, 41%, 84%);
+}
+
 label {
   color: hsl(184deg, 14%, 56%);
   margin-bottom: 0.25rem;
@@ -76,6 +80,13 @@ input:hover, input:active {
   margin: 0;
 }
 
+.dollar {
+  color: hsl(184deg, 14%, 56%);
+  position: absolute;
+  top: 35px;
+  left: 10px;
+}
+
 input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -86,17 +97,9 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
-.wrapper {
-  width: 100vw;
-  height: 100%;
-  background-color: hsl(185deg, 41%, 84%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 main {
   width: 100%;
+  height: 100%;
   background-color: hsl(0deg, 0%, 100%);
   border-radius: 10px;
   padding: 2rem;
@@ -116,6 +119,7 @@ main {
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
+  position: relative;
 }
 .section__radio {
   display: flex;
@@ -155,4 +159,33 @@ main {
 
 .active {
   color: hsl(172deg, 67%, 45%);
+}
+
+@media screen and (min-width: 764px) {
+  main {
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 650px;
+  }
+  .section {
+    width: 100%;
+  }
+  .section__input {
+    width: 95%;
+  }
+  .section__output {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+.wrapper {
+  width: 100vw;
+  height: auto;
+  background-color: hsl(185deg, 41%, 84%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }/*# sourceMappingURL=index.css.map */
