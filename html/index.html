@@ -29,14 +29,14 @@
  
                         <label for="">Sold Price</label>
                         <i class="dollar fa-solid fa-dollar-sign"></i>
-                        <input type="number">
+                        <input type="number" class="input" id="soldPrice" placeholder="0">
  
                     </div>
                     <div class="section__input__container">
  
                         <label for="">Shipping Charged</label>
                         <i class="dollar fa-solid fa-dollar-sign"></i>
-                        <input type="number">
+                        <input type="number" class="input" id="shippingCharged" placeholder="0">
  
                     </div>
  
@@ -51,12 +51,12 @@
                     </div>
                     <div id="mercari" class="section__radio__container">
  
-                        <button class="btn"><h5 class="mercari">Mercari</h5></button>
+                        <button id="mercari" class="btn"><h5 class="mercari">Mercari</h5></button>
  
                     </div>
                     <div id="paypal" class="section__radio__container">
  
-                        <button class="btn"><i class="fa-brands fa-paypal"></i></button>
+                        <button id="paypal" class="btn"><i class="fa-brands fa-paypal"></i></button>
  
                     </div>
  
@@ -68,14 +68,14 @@
  
                         <label for="">Shipping Cost</label>
                         <i class="dollar fa-solid fa-dollar-sign"></i>
-                        <input type="number">
+                        <input type="number" class="input" id="shippingCost" placeholder="0">
  
                     </div>
                     <div class="section__input__container">
  
                         <label for="">Item Cost</label>
                         <i class="dollar fa-solid fa-dollar-sign"></i>
-                        <input type="number">
+                        <input type="number" class="input" id="itemCost" placeholder="0">
  
                     </div>
  
@@ -96,7 +96,7 @@
                                 <h6>/ item</h6>
                             </div>
     
-                            <h2>$0.00</h2>
+                            <h2 class="totalFee">$0.00</h2>
      
                         </div>
                         <div class="section__output__container">
@@ -106,7 +106,7 @@
                                 <h6>/ item</h6>
                             </div>
     
-                            <h2>$0.00</h2>
+                            <h2 class="totalProfit">$0.00</h2>
      
                         </div>
 
@@ -121,7 +121,9 @@
         </main>
  
     </div>
- 
+
+ <script src="../js/app.js"></script>
+
 </body>
 </html>
 

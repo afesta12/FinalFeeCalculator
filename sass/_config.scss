@@ -76,6 +76,7 @@ input {
     color: $main-text;
     outline: none;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    font-weight: 700;
         
 }
 
@@ -123,7 +124,7 @@ input:hover, input:active {
 
     color: $secondary-text;
     position: absolute;
-    top: 35px;
+    top: 36px;
     left: 10px;
 }
 

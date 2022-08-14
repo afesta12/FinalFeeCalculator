@@ -49,6 +49,7 @@ input {
   color: hsl(172deg, 67%, 45%);
   outline: none;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  font-weight: 700;
 }
 
 input:hover, input:active {
@@ -83,7 +84,7 @@ input:hover, input:active {
 .dollar {
   color: hsl(184deg, 14%, 56%);
   position: absolute;
-  top: 35px;
+  top: 36px;
   left: 10px;
 }
 
