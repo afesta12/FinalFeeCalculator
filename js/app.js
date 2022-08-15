@@ -24,7 +24,7 @@ let map = {
 };
 
 // Default fee & selling platform are ebay
-let fee = EBAYFEE, sellingPlatform = "ebay", final;
+let fee = EBAYFEE, sellingPlatform = "ebay", final, profit;
 
 // Updates map to get current value from inputs
 inputs.forEach(input => {
@@ -35,6 +35,7 @@ inputs.forEach(input => {
         map[input.id] = input.valueAsNumber;
 
         setFinalFee();
+        setProfit(final);
 
     })
 
@@ -55,6 +56,7 @@ buttons.forEach(button => {
         else fee = EBAYFEE; // default to ebay fee
 
         setFinalFee();
+        setProfit(final);
         
     })
 
@@ -73,6 +75,19 @@ resetButton.addEventListener("click", () => {
     const ebay = document.getElementById("ebay");
     ebay.classList.add("active");
     active = ebay;
+    fee = EBAYFEE;
+
+    feeTotal.textContent = "$0.00";
+    profitTotal.textContent = "$0.00";
+
+    setFontSize(3, feeTotal);
+    setFontSize(3, profitTotal);
+
+    Object.keys(map).forEach(key => {
+
+        map[key] = 0;
+
+    });
 
 })
 
@@ -100,8 +115,35 @@ function getFinalFee(sellingPlatform, fee) {
  
 }
 
+function getProfit() {
+
+    return (map["soldPrice"] - final - map["shippingCost"] - map["itemCost"] + map["shippingCharged"]).toFixed(2);
+
+}
+
+function setProfit() {
+
+    profit = getProfit();
+    
+    setFontSize(profit.length, profitTotal);
+
+    isNaN(profit) ? profitTotal.textContent = "$0.00" : profitTotal.textContent = `$${profit}`;
+}
+
 function setFinalFee() {
-    final = getFinalFee(sellingPlatform, fee);
+    final = getFinalFee(sellingPlatform, fee); 
+
+    setFontSize(final.length, feeTotal);
 
     isNaN(final) ? feeTotal.textContent = "$0.00" : feeTotal.textContent = `$${final}`;
+}
+
+function setFontSize(length, element) {
+
+    if(length < 5) element.style.fontSize = "2.5rem";
+    else if(length <= 7) element.style.fontSize = "2.25rem";
+    else if(length <= 9) element.style.fontSize = "2rem";
+    else if(length <= 19) element.style.fontSize = "1rem";
+    else element.style.fontSize = ".75rem";
+
 }

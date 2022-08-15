@@ -48,6 +48,7 @@ main {
             display: flex;
             align-items: center;
             justify-content: center;
+            @include transition-ease;
 
         }
         
@@ -67,7 +68,8 @@ main {
             justify-content: space-between;
             align-items: center;
             margin-bottom: .5rem;
-    
+            overflow-x: hidden;
+            
         }
 
     }
@@ -81,12 +83,19 @@ main {
     background-color: transparent;
     border: none;
     font-size: 1.4rem;
+    @include transition-ease;
 
 }
 
 .btn:hover {
 
     color: $main-text;
+
+}
+
+.btn:active {
+
+    transform: scale(0.93);
 
 }
 

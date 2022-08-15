@@ -50,6 +50,7 @@ input {
   outline: none;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
   font-weight: 700;
+  transition: all 0.3s ease-in-out;
 }
 
 input:hover, input:active {
@@ -71,6 +72,10 @@ input:hover, input:active {
   font-size: 1.25rem;
   font-weight: bold;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.reset:active {
+  transform: scale(0.98);
 }
 
 .radio {
@@ -131,6 +136,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s ease-in-out;
 }
 .section__output {
   background-color: hsl(183deg, 100%, 15%);
@@ -144,6 +150,7 @@ main {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0.5rem;
+  overflow-x: hidden;
 }
 
 .btn {
@@ -152,10 +159,15 @@ main {
   background-color: transparent;
   border: none;
   font-size: 1.4rem;
+  transition: all 0.3s ease-in-out;
 }
 
 .btn:hover {
   color: hsl(172deg, 67%, 45%);
+}
+
+.btn:active {
+  transform: scale(0.93);
 }
 
 .active {
@@ -167,6 +179,9 @@ main {
     flex-direction: row;
     justify-content: space-between;
     min-width: 650px;
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
   }
   .section {
     width: 100%;

@@ -8,6 +8,13 @@ $white: hsl(0, 0%, 100%);
 $secondary-text: hsl(184, 14%, 56%);
 $input: hsl(189, 41%, 97%);
 
+//  Transitions
+@mixin transition-ease {
+    
+    transition: all .3s ease-in-out;
+
+}
+
 * {
 
     margin: 0;
@@ -77,6 +84,7 @@ input {
     outline: none;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
     font-weight: 700;
+    @include transition-ease;
         
 }
 
@@ -104,6 +112,13 @@ input:hover, input:active {
     font-size: 1.25rem;
     font-weight: bold;
     cursor: pointer;
+    @include transition-ease;
+
+    &:active {
+
+        transform: scale(.98);
+
+    }
 
 }
 
