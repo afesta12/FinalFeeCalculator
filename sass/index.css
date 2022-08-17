@@ -64,7 +64,7 @@ input:hover, input:active {
 
 .reset {
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
   color: hsl(183deg, 100%, 15%);
   background-color: hsl(172deg, 67%, 45%);
   width: 100%;
@@ -74,16 +74,15 @@ input:hover, input:active {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
+.reset:hover {
+  border-radius: 15px;
+}
 .reset:active {
   transform: scale(0.98);
 }
 
-.radio {
+.btn {
   cursor: pointer;
-  margin-left: 0.25rem;
-}
-.radio__label {
-  margin: 0;
 }
 
 .dollar {
@@ -129,7 +128,7 @@ main {
 }
 .section__radio {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   margin-bottom: 1rem;
 }
 .section__radio__container {
@@ -182,6 +181,7 @@ main {
     max-width: -webkit-fit-content;
     max-width: -moz-fit-content;
     max-width: fit-content;
+    height: 100%;
   }
   .section {
     width: 100%;
@@ -195,6 +195,9 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+  .section__radio {
+    margin-right: 1.25rem;
   }
 }
 .wrapper {

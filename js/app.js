@@ -31,12 +31,16 @@ inputs.forEach(input => {
 
     input.addEventListener("input", () => {
 
-        // key = input's id, value = input's data
-        map[input.id] = input.valueAsNumber;
+        if(input.valueAsNumber >= 0) {
 
-        setFinalFee();
-        setProfit(final);
+            // key = input's id, value = input's data
+            map[input.id] = input.valueAsNumber;
 
+            setFinalFee();
+            setProfit(final);
+            
+        } 
+        
     })
 
 });
@@ -55,9 +59,12 @@ buttons.forEach(button => {
         else if(sellingPlatform === "paypal") fee = PAYPALFEE;
         else fee = EBAYFEE; // default to ebay fee
 
-        setFinalFee();
-        setProfit(final);
-        
+        if(map["soldPrice"] > 0) {
+            
+            setFinalFee();
+            setProfit(final);
+
+        }
     })
 
 });

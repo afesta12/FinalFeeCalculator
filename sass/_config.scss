@@ -7,6 +7,7 @@ $main-text: hsl(172, 67%, 45%);
 $white: hsl(0, 0%, 100%);
 $secondary-text: hsl(184, 14%, 56%);
 $input: hsl(189, 41%, 97%);
+$error: #ff0033;
 
 //  Transitions
 @mixin transition-ease {
@@ -104,7 +105,7 @@ input:hover, input:active {
 .reset {
 
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     color: $dark;
     background-color: $main-text;
     width: 100%;
@@ -114,6 +115,12 @@ input:hover, input:active {
     cursor: pointer;
     @include transition-ease;
 
+    &:hover {
+
+        border-radius: 15px;
+
+    }   
+
     &:active {
 
         transform: scale(.98);
@@ -122,16 +129,9 @@ input:hover, input:active {
 
 }
 
-.radio {
+.btn {
 
     cursor: pointer;
-    margin-left: .25rem;
-
-    &__label {
-
-        margin: 0;
-
-    }
 
 }
 
