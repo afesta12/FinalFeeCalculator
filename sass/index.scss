@@ -1,6 +1,5 @@
 @import 'config';
 @import 'mobile';
-@import 'responsive';
 
 .wrapper {
 
@@ -12,4 +11,6 @@
     align-items: center;
 
 }
+
+@import 'responsive';
 

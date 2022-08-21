@@ -38,6 +38,7 @@ inputs.forEach(input => {
 
             setFinalFee();
             setProfit(final);
+            updateChart();
             
         } 
         
@@ -59,10 +60,11 @@ buttons.forEach(button => {
         else if(sellingPlatform === "paypal") fee = PAYPALFEE;
         else fee = EBAYFEE; // default to ebay fee
 
-        if(map["soldPrice"] > 0) {
+        if(map["soldPrice"] >= 0) {
             
             setFinalFee();
             setProfit(final);
+            updateChart();
 
         }
     })
@@ -95,6 +97,10 @@ resetButton.addEventListener("click", () => {
         map[key] = 0;
 
     });
+
+    myChart.data["datasets"][0].data[0] = EBAYFEE;
+    myChart.data["datasets"][0].data[1] = 0
+    myChart.update();
 
 })
 
@@ -154,3 +160,46 @@ function setFontSize(length, element) {
     else element.style.fontSize = ".75rem";
 
 }
+
+function updateChart() {
+
+    if(parseFloat(profit) < 0) {
+
+        myChart.data["datasets"][0].data[0] = parseFloat(final) - parseFloat(profit);
+        myChart.data["datasets"][0].data[1] = 0;
+
+    } else {
+
+        myChart.data["datasets"][0].data[0] = parseFloat(final);
+        myChart.data["datasets"][0].data[1] = parseFloat(profit)
+
+    }
+
+    myChart.update();
+
+}
+
+function createChart() {
+    
+      const data = {
+        datasets: [{
+          label: 'My First dataset',
+          backgroundColor: ['rgb(255, 99, 132)', 'hsl(172, 67%, 45%)'],
+          borderColor: ['rgb(255, 99, 132)', 'hsl(172, 67%, 45%)'],
+          data: [-0.30, .30],
+        }]
+      };
+    
+      const config = {
+        type: 'pie',
+        data: data,
+        options: {}
+      };
+
+      myChart = new Chart(
+        document.getElementById('chart'),
+        config
+      );
+}
+
+createChart();

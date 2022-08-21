@@ -104,3 +104,17 @@ main {
     color: $main-text;
     
 }
+
+.graph {
+
+    visibility: hidden;
+    width: 0;
+    height: 0;
+
+}
+
+.flex {
+
+    display: none;
+
+}

@@ -68,6 +68,20 @@ p {
 
 }
 
+small {
+
+    color: rgb(255, 99, 132);
+    font-size: .5rem;
+    margin-left: .25rem;
+
+}
+
+.small-text {
+
+    color: $main-text;
+
+}
+
 h6 {
 
     color: $secondary-text;

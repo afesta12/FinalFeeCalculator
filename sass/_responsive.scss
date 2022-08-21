@@ -3,7 +3,7 @@
     main {
 
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-evenly;
         min-width: 650px;
         max-width: fit-content;
         height: 100%;
@@ -38,4 +38,23 @@
 
     }
 
+    .graph {
+
+        visibility: visible;
+        width: 100px;
+        height: 100px;
+        align-self: center;
+        justify-self: center;
+
+
+    }
+
+    .flex {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+
+    }
 }
