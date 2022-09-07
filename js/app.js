@@ -31,7 +31,7 @@ inputs.forEach(input => {
 
     input.addEventListener("input", () => {
 
-        if(input.valueAsNumber >= 0) {
+        if(input.valueAsNumber > 0) {
 
             // key = input's id, value = input's data
             map[input.id] = input.valueAsNumber;
@@ -60,7 +60,7 @@ buttons.forEach(button => {
         else if(sellingPlatform === "paypal") fee = PAYPALFEE;
         else fee = EBAYFEE; // default to ebay fee
 
-        if(map["soldPrice"] >= 0) {
+        if(map["soldPrice"] > 0) {
             
             setFinalFee();
             setProfit(final);
@@ -99,13 +99,24 @@ resetButton.addEventListener("click", () => {
     });
 
     myChart.data["datasets"][0].data[0] = EBAYFEE;
-    myChart.data["datasets"][0].data[1] = 0
+    myChart.data["datasets"][0].data[1] = fee;
     myChart.update();
 
 })
 
 // Final value fee calculations
 function ebayFee(fee) {
+
+    // Fees for item greater than $7500
+    if(map["soldPrice"] >= 7500) {
+
+        const firstFee = 7500;
+        const secondFee = map["soldPrice"] - firstFee;
+
+        return ((firstFee * fee) + (secondFee * .0235) + .30).toFixed(2);
+
+    }
+
     return ((map["soldPrice"] * fee) + .30).toFixed(2);
 }
 
